@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""ROS1 ground_truth_odom: Gazebo link_states -> odom->base_footprint TF (tf2)"""
 import rospy, tf2_ros, math
 from gazebo_msgs.msg import LinkStates
 from geometry_msgs.msg import TransformStamped
@@ -9,11 +8,11 @@ class GroundTruthOdom:
         rospy.init_node("ground_truth_odom")
         self.br = tf2_ros.TransformBroadcaster()
         self.sub = rospy.Subscriber("/gazebo/link_states", LinkStates, self.cb)
-        rospy.loginfo("ground_truth_odom started (tf2)")
+        rospy.loginfo("ground_truth_odom started")
 
     def cb(self, msg):
         try:
-            idx = msg.name.index("tron2_robot::base_Link")
+            idx = msg.name.index("tron2_robot::base_link")
         except ValueError:
             return
         p = msg.pose[idx]
@@ -31,5 +30,5 @@ class GroundTruthOdom:
         self.br.sendTransform(t)
 
 if __name__ == "__main__":
-    rospy.init_node("ground_truth_odom")
+    GroundTruthOdom()
     rospy.spin()

@@ -20,7 +20,7 @@
   <!-- IMU Link -->
   <joint name="base_imu_Joint" type="fixed">
     <origin rpy="0. 0. 0." xyz="0. 0. 0." />
-    <parent link="base_Link" />
+    <parent link="base_link" />
     <child link="base_imu" />
   </joint>
 
@@ -44,7 +44,7 @@
   </gazebo>
 
   <!-- Links -->
-  <link name="base_Link">
+  <link name="base_link">
     <inertial>
       <origin xyz="3.85E-03 -0.11E-03 112.54E-03" rpy="0 0 0" />
       <mass value="12.57" />
@@ -367,7 +367,7 @@
   <!-- Joints -->
   <joint name="proximal_pitch_L_Joint" type="revolute">
     <origin xyz="-0.00044 0.09178 0.05474" rpy="0 0 0" />
-    <parent link="base_Link" />
+    <parent link="base_link" />
     <child link="proximal_pitch_L_Link" />
     <axis xyz="0.0 0.9961947268929313 -0.0871554135479712" />
     <limit lower="-3.141592653589793" upper="2.600540585471551" effort="150" velocity="18.3" />
@@ -407,7 +407,7 @@
 
   <joint name="proximal_pitch_R_Joint" type="revolute">
     <origin xyz="-0.00044 -0.09178 0.05474" rpy="0 0 0" />
-    <parent link="base_Link" />
+    <parent link="base_link" />
     <child link="proximal_pitch_R_Link" />
     <axis xyz="0.0 0.9961947268929313 0.0871554135479712" />
     <limit lower="-3.141592653589793" upper="2.600540585471551" effort="150" velocity="18.3" />
