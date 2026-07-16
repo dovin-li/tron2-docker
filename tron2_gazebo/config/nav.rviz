@@ -1,0 +1,21 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+  - Class: rviz/Views
+    Name: Views
+Visualization Manager:
+  Displays:
+    - Class: rviz/Map
+      Name: Map
+      Topic: /map
+    - Class: rviz/LaserScan
+      Name: LaserScan
+      Topic: /scan
+    - Class: rviz/TF
+      Name: TF
+  Global Options:
+    Fixed Frame: map
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 15

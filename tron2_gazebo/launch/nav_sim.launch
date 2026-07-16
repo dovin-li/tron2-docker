@@ -1,0 +1,26 @@
+<launch>
+  <!-- AMCL Localization -->
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <param name="odom_frame_id" value="odom"/>
+    <param name="base_frame_id" value="base_footprint"/>
+    <param name="global_frame_id" value="map"/>
+    <param name="use_map_topic" value="true"/>
+    <param name="odom_model_type" value="diff"/>
+    <rosparam file="$(find tron2_gazebo)/config/amcl_params.yaml"/>
+  </node>
+
+  <!-- Move Base -->
+  <node pkg="move_base" type="move_base" name="move_base" output="screen">
+    <rosparam file="$(find tron2_gazebo)/config/costmap_common.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find tron2_gazebo)/config/costmap_common.yaml" command="load" ns="local_costmap"/>
+    <rosparam file="$(find tron2_gazebo)/config/local_costmap.yaml"/>
+    <rosparam file="$(find tron2_gazebo)/config/global_costmap.yaml"/>
+    <rosparam file="$(find tron2_gazebo)/config/base_local_planner_params.yaml"/>
+    <param name="base_global_planner" value="navfn/NavfnROS"/>
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+  </node>
+
+  <!-- Static TF: map → odom -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="map_to_odom"
+        args="0 0 0 0 0 0 map odom"/>
+</launch>

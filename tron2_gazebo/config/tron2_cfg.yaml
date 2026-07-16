@@ -1,0 +1,14 @@
+# TRON2 hardware interface initialization parameters
+Tron2Cfg:
+  init_state:
+    joint_names:
+      - proximal_pitch_L_Joint
+      - proximal_roll_L_Joint
+      - proximal_yaw_L_Joint
+      - knee_L_Joint
+      - ankle_pitch_L_Joint
+      - proximal_pitch_R_Joint
+      - proximal_roll_R_Joint
+      - proximal_yaw_R_Joint
+      - knee_R_Joint
+      - ankle_pitch_R_Joint

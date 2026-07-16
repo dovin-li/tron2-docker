@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <world name="office">
+        <physics type="ode">
+            <max_step_size>0.002</max_step_size>
+            <real_time_update_rate>500</real_time_update_rate>
+        </physics>
+        <include><uri>model://sun</uri></include>
+        <include><uri>model://ground_plane</uri></include>
+
+        <!-- Outer walls -->
+        <model name="wall_north"><static>true</static>
+            <link name="link"><collision name="coll"><geometry><box><size>10 0.2 2</size></box></geometry></collision>
+            <visual name="visual"><geometry><box><size>10 0.2 2</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual>
+            </link><pose>0 5 1 0 0 0</pose></model>
+        <model name="wall_south"><static>true</static>
+            <link name="link"><collision name="coll"><geometry><box><size>10 0.2 2</size></box></geometry></collision>
+            <visual name="visual"><geometry><box><size>10 0.2 2</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual>
+            </link><pose>0 -5 1 0 0 0</pose></model>
+        <model name="wall_east"><static>true</static>
+            <link name="link"><collision name="coll"><geometry><box><size>0.2 10 2</size></box></geometry></collision>
+            <visual name="visual"><geometry><box><size>0.2 10 2</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual>
+            </link><pose>5 0 1 0 0 0</pose></model>
+        <model name="wall_west"><static>true</static>
+            <link name="link"><collision name="coll"><geometry><box><size>0.2 10 2</size></box></geometry></collision>
+            <visual name="visual"><geometry><box><size>0.2 10 2</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual>
+            </link><pose>-5 0 1 0 0 0</pose></model>
+
+        <!-- Inner obstacle -->
+        <model name="pillar1"><static>true</static>
+            <link name="link"><collision name="coll"><geometry><cylinder><radius>0.3</radius><length>2</length></cylinder></geometry></collision>
+            <visual name="visual"><geometry><cylinder><radius>0.3</radius><length>2</length></cylinder></geometry><material><ambient>0.5 0.3 0.2 1</ambient></material></visual>
+            </link><pose>1.5 1.5 1 0 0 0</pose></model>
+        <model name="pillar2"><static>true</static>
+            <link name="link"><collision name="coll"><geometry><cylinder><radius>0.3</radius><length>2</length></cylinder></geometry></collision>
+            <visual name="visual"><geometry><cylinder><radius>0.3</radius><length>2</length></cylinder></geometry><material><ambient>0.5 0.3 0.2 1</ambient></material></visual>
+            </link><pose>-2 -1 1 0 0 0</pose></model>
+
+        <!-- Box barrier -->
+        <model name="barrier"><static>true</static>
+            <link name="link"><collision name="coll"><geometry><box><size>2 0.3 1</size></box></geometry></collision>
+            <visual name="visual"><geometry><box><size>2 0.3 1</size></box></geometry><material><ambient>0.8 0.8 0.2 1</ambient></material></visual>
+            </link><pose>0 -3 0.5 0 0 0.3</pose></model>
+    </world>
+</sdf>
