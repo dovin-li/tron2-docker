@@ -312,7 +312,7 @@
   </link>
   <gazebo reference="mid360_Link">
     <sensor type="ray" name="mid360_lidar">
-      <pose>0 0 0.15 -1.5707963267948966 0 0</pose>
+      <pose>0 0 0.15 0 0 0</pose>
       <visualize>false</visualize>
       <update_rate>10</update_rate>
       <ray>
@@ -323,6 +323,11 @@
             <min_angle>-3.14159</min_angle>
             <max_angle>3.14159</max_angle>
           </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </vertical>
         </scan>
         <range>
           <min>0.1</min>
