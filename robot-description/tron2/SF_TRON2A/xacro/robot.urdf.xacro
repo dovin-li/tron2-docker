@@ -312,7 +312,7 @@
   </link>
   <gazebo reference="mid360_Link">
     <sensor type="ray" name="mid360_lidar">
-      <pose>0 0 0.4 0 0 0</pose>
+      <pose>0 0 0.6 0 0 0</pose>
       <visualize>false</visualize>
       <update_rate>10</update_rate>
       <ray>
@@ -341,7 +341,7 @@
   <!-- 3D LiDAR PointCloud for /scan3d -->
   <gazebo reference="mid360_Link">
     <sensor type="ray" name="mid360_3d">
-      <pose>0 0 0.4 0 0 0</pose>
+      <pose>0 0 0.6 0 0 0</pose>
       <visualize>false</visualize>
       <update_rate>10</update_rate>
       <ray>
