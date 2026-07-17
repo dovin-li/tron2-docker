@@ -366,6 +366,7 @@
         </range>
       </ray>
       <plugin name="mid360_3d_plugin" filename="libgazebo_ros_block_laser.so">
+        <updateRate>10</updateRate>
         <topicName>/scan3d</topicName>
         <frameName>mid360_Link</frameName>
       </plugin>
