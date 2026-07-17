@@ -52,14 +52,14 @@
         iyy="135812.53E-06" iyz="81.23E-06" izz="105408.73E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/base_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/base_Link.STL" />
       </geometry>
@@ -74,14 +74,14 @@
         iyy="3081.83E-06" iyz="52.13E-06" izz="3495.04E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_pitch_L_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_pitch_L_Link.STL" />
       </geometry>
@@ -96,14 +96,14 @@
         iyy="5455.84E-06" iyz="-29.46E-06" izz="3053.16E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_roll_L_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_roll_L_Link.STL" />
       </geometry>
@@ -118,14 +118,14 @@
         iyy="14853.62E-06" iyz="75.69E-06" izz="3780.04E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_yaw_L_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_yaw_L_Link.STL" />
       </geometry>
@@ -139,14 +139,14 @@
       <inertia ixx="0.10084664" ixy="-3.842e-05" ixz="-0.00100642" iyy="0.10273037" iyz="-0.00292437" izz="0.00591261"/>
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/knee_L_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/knee_L_Link.STL" />
       </geometry>
@@ -161,14 +161,14 @@
         iyy="3461.81E-06" iyz="68.35E-06" izz="3941.99E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/ankle_pitch_L_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/ankle_pitch_L_Link.STL" />
       </geometry>
@@ -183,14 +183,14 @@
         iyy="0.00308183" iyz="-5.213e-05" izz="0.00349504" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_pitch_R_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_pitch_R_Link.STL" />
       </geometry>
@@ -205,14 +205,14 @@
         iyy="0.00545584" iyz="2.946e-05" izz="0.00305316" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_roll_R_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_roll_R_Link.STL" />
       </geometry>
@@ -227,14 +227,14 @@
         iyy="0.01485362" iyz="-7.569e-05" izz="0.00378004" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_yaw_R_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/proximal_yaw_R_Link.STL" />
       </geometry>
@@ -248,14 +248,14 @@
       <inertia ixx="0.10084664" ixy="3.842e-05" ixz="-0.00100642" iyy="0.10273037" iyz="0.00292437" izz="0.00591261"/>
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/knee_R_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/knee_R_Link.STL" />
       </geometry>
@@ -270,14 +270,14 @@
         iyy="0.00346181" iyz="-6.835e-05" izz="0.00394199" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/ankle_pitch_R_Link.STL" />
       </geometry>
       <material name="grey" />
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/ankle_pitch_R_Link.STL" />
       </geometry>
@@ -288,7 +288,7 @@
   <joint name="mid360_joint" type="fixed">
     <parent link="base_imu" />
     <child link="mid360_Link" />
-    <origin xyz="0 0 0" rpy="3.14159 0 0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
   <link name="mid360_Link">
     <visual>
