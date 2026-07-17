@@ -312,7 +312,7 @@
   </link>
   <gazebo reference="mid360_Link">
     <sensor type="ray" name="mid360_lidar">
-      <pose>0 0 0.15 0 0 0</pose>
+      <pose>0 0 0.15 -1.5707963267948966 0 0</pose>
       <visualize>false</visualize>
       <update_rate>10</update_rate>
       <ray>
