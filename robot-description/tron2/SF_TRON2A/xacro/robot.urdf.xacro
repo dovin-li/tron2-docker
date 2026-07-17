@@ -323,11 +323,6 @@
             <min_angle>-3.14159</min_angle>
             <max_angle>3.14159</max_angle>
           </horizontal>
-          <vertical>
-            <samples>3</samples>
-            <min_angle>-0.01</min_angle>
-            <max_angle>0.01</max_angle>
-          </vertical>
         </scan>
         <range>
           <min>0.1</min>
