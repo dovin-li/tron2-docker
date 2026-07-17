@@ -353,7 +353,7 @@
             <max_angle>3.14159</max_angle>
           </horizontal>
           <vertical>
-            <samples>16</samples>
+            <samples>40</samples>
             <resolution>1</resolution>
             <min_angle>-0.122173</min_angle>
             <max_angle>0.907571</max_angle>
