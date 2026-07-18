@@ -284,60 +284,6 @@
     </collision>
   </link>
 
-  <!-- Livox Mid-360 LiDAR -->
-  <joint name="mid360_joint" type="fixed">
-    <parent link="base_imu" />
-    <child link="mid360_Link" />
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
-  <link name="mid360_Link">
-    <visual>
-      <origin xyz="-0.0425 0 -0.04" rpy="0 0 -1.570796" />
-      <geometry>
-        <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/mid360/mid360.stl" />
-      </geometry>
-      <material name="mid360_mat"><color rgba="0.5 0.5 0.5 1" /></material>
-    </visual>
-    <collision>
-      <origin xyz="-0.0425 0 -0.04" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/mid360/mid360.stl" />
-      </geometry>
-    </collision>
-    <inertial>
-      <origin xyz="0 0 -0.00" rpy="0 0 -1.570796" />
-      <mass value="0.265" />
-      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
-    </inertial>
-  </link>
-  <gazebo reference="mid360_Link">
-    <sensor type="ray" name="mid360_lidar">
-      <pose>0 0 0.15 0 0 0</pose>
-      <visualize>false</visualize>
-      <update_rate>10</update_rate>
-      <ray>
-        <scan>
-          <horizontal>
-            <samples>1800</samples>
-            <resolution>1</resolution>
-            <min_angle>-3.14159</min_angle>
-            <max_angle>3.14159</max_angle>
-          </horizontal>
-        </scan>
-        <range>
-          <min>0.1</min>
-          <max>40.0</max>
-          <resolution>0.02</resolution>
-        </range>
-      </ray>
-      <plugin name="mid360_lidar_plugin" filename="libgazebo_ros_laser.so">
-        <topicName>/scan</topicName>
-        <frameName>mid360_Link</frameName>
-        <output_type>sensor_msgs/LaserScan</output_type>
-      </plugin>
-    </sensor>
-  </gazebo>
-
   <!-- D435 Camera Links -->
   <link name="d435_Link">
     <visual>
@@ -363,6 +309,101 @@
     <child link="d435_optical_frame" />
   </joint>
   <link name="d435_optical_frame" />
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- Rack (LiDAR mount)                          -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <link name="rack_link">
+    <inertial>
+      <origin xyz="0 0 0.111" rpy="0 0 0"/>
+      <mass value="0.5"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/rack.stl"/>
+      </geometry>
+      <material name="rack_grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/rack.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rack_joint" type="fixed">
+    <parent link="base_imu"/>
+    <child link="rack_link"/>
+    <origin xyz="0 0 0.2615" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- Mid-360 LiDAR（倒装：joint rpy 翻转）         -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <link name="mid360_link">
+    <inertial>
+      <mass value="0.265"/>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <inertia ixx="0.0005" ixy="0" ixz="0" iyy="0.0005" iyz="0" izz="0.0005"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/mid360.stl"/>
+      </geometry>
+      <material name="dark">
+        <color rgba="0.15 0.15 0.15 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_description/tron2/SF_TRON2A/meshes/mid360.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="mid360_joint" type="fixed">
+    <parent link="rack_link"/>
+    <child link="mid360_link"/>
+    <origin xyz="0 0 0.19" rpy="3.14159 0 0"/>
+  </joint>
+  <!-- Mid-360 LiDAR Gazebo Sensor -->
+  <gazebo reference="mid360_link">
+    <sensor type="ray" name="mid360_lidar">
+      <pose>0 0 0.15 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>1800</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>40.0</max>
+          <resolution>0.02</resolution>
+        </range>
+      </ray>
+      <plugin name="mid360_lidar_plugin" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>mid360_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
 
   <!-- Joints -->
   <joint name="proximal_pitch_L_Joint" type="revolute">
