@@ -403,6 +403,41 @@
     </sensor>
   </gazebo>
 
+  <!-- 3D LiDAR PointCloud for /scan3d -->
+  <gazebo reference="mid360_link">
+    <sensor type="ray" name="mid360_3d">
+      <pose>0 0 0.15 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>180</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>32</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.122173</min_angle>
+            <max_angle>0.907571</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>40.0</max>
+          <resolution>0.02</resolution>
+        </range>
+      </ray>
+      <plugin name="mid360_3d_plugin" filename="libgazebo_ros_block_laser.so">
+        <updateRate>10</updateRate>
+        <topicName>/scan3d</topicName>
+        <frameName>mid360_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
 
 
   <!-- Joints -->
