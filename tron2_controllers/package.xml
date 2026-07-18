@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>tron2_controllers</name>
+    <version>0.0.0</version>
+    <description>RL controllers for TRON2 biped robot (SF/WF) in Gazebo simulation.</description>
+    <maintainer email="dev@example.com">developer</maintainer>
+    <license>Proprietary</license>
+    <buildtool_depend>catkin</buildtool_depend>
+    <depend>roscpp</depend>
+    <depend>robot_common</depend>
+    <depend>robot_description</depend>
+    <depend>controller_interface</depend>
+    <depend>hardware_interface</depend>
+    <depend>std_msgs</depend>
+    <depend>geometry_msgs</depend>
+    <depend>onnxruntime_sdk</depend>
+    <build_depend>eigen</build_depend>
+    <export>
+        <controller_interface plugin="${prefix}/tron2_controllers_plugins.xml"/>
+    </export>
+</package>
