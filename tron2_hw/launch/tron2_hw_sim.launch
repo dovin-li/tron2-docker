@@ -38,4 +38,5 @@
 
     <!-- Web panel on port 8080 -->
     <node name="web_walk" pkg="tron2_gazebo" type="web_walk.py" output="screen"/>
+    <node name="rosbridge" pkg="rosbridge_server" type="rosbridge_websocket" args="_port:=9090" respawn="true" output="screen"/>
 </launch>

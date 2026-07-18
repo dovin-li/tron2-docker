@@ -30,7 +30,7 @@ class JoyToCmdVel:
         if abs(wz) < 0.1: wz = 0
 
         t = Twist()
-        t.linear.x, t.linear.y, t.angular.z = vx, vy, wz
+        t.linear.x, t.linear.y, t.angular.z = vx, -vy, -wz
         self.cmd_pub.publish(t)
 
 if __name__ == '__main__':
