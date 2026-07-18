@@ -3,3 +3,16 @@ limxsdk-lowlevel/
 limxsdk-sim/
 onnxruntime_sdk/
 *.so
+*.stl
+*.STL
+*.onnx
+limxsdk-sim/
+limxsdk-lowlevel/
+onnxruntime_sdk/
+tron2_controllers/
+tron2_rl_deploy_python/
+tron2_rl_deploy_ros-master/
+tron2_rl_lab-main/
+tron2_mujoco_sim/
+tron2_gazebo_ros/
+force-rebuild/
